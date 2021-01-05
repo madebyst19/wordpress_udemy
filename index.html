@@ -3,40 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Webpage</title>
+    <style text="text/css">
+    p{
+    border-style:dashed solid double ridge;
+    font-family:serif;
+    }
+
+    </style>
 </head>
 <body>
-    <table border>
-    <thead>
-        <tr>
-            <th>見出し</th>
-            <th>いあい</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>ああああああ</td>
-            <td>3</td>
-        </tr>
-        <tr>
-            <td>いいいい</td>
-            <td>６</td>
-        </tr>
-        <tr>
-            <td>うううううう</td>
-            <td>7</td>
-        </tr>
-        <tr>
-            <td>ああああああ</td>
-            <td>3</td>
-        </tr>
-    </tbody>
-</table>
-<object src="http://picsell.site/" width="100%" height="auto">
-    <p>お使いのブラウザはobjectタグに対応しておりません。</p> 
-    <!--objectタグ未対応のブラウザの場合はここの文字が表示される-->
-  </object>
-<iframe src="http://picsell.site/" frameborder="0"></iframe>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/kRT174IdxuM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <p id="text">hello world</p>
+    <button id="mybutton">Change text</button>
+    <script type="text/javascript">
+    document.getElementById('mybutton').onclick = function(){
+       // alert('ボタンがクリックされました');
+        document.getElementById("text").innerHTML = "kekekke"
+    }
+    </script>
+        <p id="secondParagaph">Javaは</p>
+        <button id="secondButton">追記する</button>
+        <p id="thirdParagraph">スタイルを変更</p>
+        <button id="changestyle">スタイルを変更する</button>
+
+    <script type="text/javascript">
+    document.getElementById("secondButton").onclick = function(){
+        document.getElementById('secondParagaph').innerHTML += "はブラウでもサーバーサイドでも動作する";
+    }
+    document.getElementById("changestyle").onclick = function(){
+        document.getElementById('thirdParagraph').style.display = "none";
+    }
+        </script>
 </body>
 </html>
