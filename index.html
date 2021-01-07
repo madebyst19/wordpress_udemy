@@ -5,34 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Webpage</title>
     <style text="text/css">
-    p{
-    border-style:dashed solid double ridge;
-    font-family:serif;
+    .red{
+    font-size:red;
+    }
+    .green{
+    background-color: green;
+    }
+    .blue{
+    background-color: blue;
+    }
+    .circle{
+        radius:50%;
+        width:100px;
+        height:100px;
     }
 
     </style>
 </head>
 <body>
-    <p id="text">hello world</p>
-    <button id="mybutton">Change text</button>
-    <script type="text/javascript">
-    document.getElementById('mybutton').onclick = function(){
-       // alert('ボタンがクリックされました');
-        document.getElementById("text").innerHTML = "kekekke"
-    }
-    </script>
-        <p id="secondParagaph">Javaは</p>
-        <button id="secondButton">追記する</button>
-        <p id="thirdParagraph">スタイルを変更</p>
-        <button id="changestyle">スタイルを変更する</button>
-
-    <script type="text/javascript">
-    document.getElementById("secondButton").onclick = function(){
-        document.getElementById('secondParagaph').innerHTML += "はブラウでもサーバーサイドでも動作する";
-    }
-    document.getElementById("changestyle").onclick = function(){
-        document.getElementById('thirdParagraph').style.display = "none";
-    }
-        </script>
+    <div id="red" class="circle"></div>
+    <div id="green" class="circle">a</div>
+    <div id="blue" class="circle">a</div>
 </body>
 </html>
