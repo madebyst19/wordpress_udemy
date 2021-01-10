@@ -4,27 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Webpage</title>
-    <style text="text/css">
-    .red{
-    font-size:red;
-    }
-    .green{
-    background-color: green;
-    }
-    .blue{
-    background-color: blue;
-    }
-    .circle{
-        radius:50%;
-        width:100px;
-        height:100px;
-    }
-
-    </style>
 </head>
 <body>
-    <div id="red" class="circle"></div>
-    <div id="green" class="circle"></div>
-    <div id="blue" class="circle"></div>
+   <p><input type="text" id="text">ここに名前いれろ</p>
+   <button id ="button">送信する</button>
+   <p id ="content"></p>
+    <script type="text/javascript">
+   document.getElementById("button").onclick = function(){
+       var name = "";
+       name = document.getElementById("text").value;
+       document.getElementById("content").innerHTML = name + "さん";
+   }
+    </script>
 </body>
 </html>
