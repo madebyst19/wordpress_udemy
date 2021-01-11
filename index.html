@@ -6,12 +6,14 @@
     <title>Webpage</title>
 </head>
 <body>
-
+    <div id="tweetsdiv"></div>
     <script type="text/javascript">
-    var tweets =["おはようございます","aaaaa","0101010"];
-    tweets.push ="仕事が終わった";
-    tweets.splice(1,3,"本日のランチは")
-    console.log(tweets);
+    var tweets=["aorning","borning","corning","dorning"];
+    var tweetsString="";
+        for(var i = 0;i < tweets.length;i++){
+            tweetsString = tweetsString + "<p>"+ tweets[i] + "</p>";
+        }
+        document.getElementById("tweetsdiv").innerHTML = tweetsString;
     </script>
 </body>
 </html>
